@@ -1,0 +1,259 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff9900;
+}
+
+
+#home {
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+    animation: scaleUp 2s ease-out;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.home img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-out;
+}
+
+
+.home img.mr-beast-img,
+.home img.fan-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+
+
+#product {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.product-item img:hover {
+    transform: scale(1.1);
+}
+
+
+#testimonials {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-item {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.testimonial-item:hover {
+    transform: translateY(-10px);
+}
+
+
+#contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact form input,
+.contact form textarea {
+    padding: 10px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button {
+    background-color: #ff9900;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact form button:hover {
+    background-color: #cc7a00;
+}
+
+
+.contact-details {
+    margin-top: 20px;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ff9900;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+
+    .home img.mr-beast-img,
+    .home img.fan-img {
+        max-height: 300px;
+    }
+}
